@@ -6,23 +6,24 @@ Cloud Function is a light-weight solution to deploy your service, especially whe
 Since Google Cloud Platform hasn't release the Cloud function's implementation of datastore, I decided to write a tutorial how to do it.
 
 # Steps
-* Setup Cloud Datastore
+* Create Cloud Datastore
 	* Create a Google Cloud Platform Project
 	* Setup Cloud Datastore
-	* Setup example code
-* Setup Cloud Function
-	* Enable cloud function API
+    * Obtain Datastore Credential
+	* Download Example Code
+* Deploy Cloud Function
+	* Enable Cloud Function API
 	* Install Cloud SDK
 	* Install Cloud Function SDK
 	* Deploy
-* Save a log
-	* Take a look at the function
+* Save a Log
+	* Take a look at the Function
 	* Send a request to Cloud Function
-	* Check the log on Datastore
+	* Check the Log on Datastore
 * Summary
 * OS & APIs versions
 
-# Setup Cloud Datastore
+# Create Cloud Datastore
 ## Create a Google Cloud Platform Project
 1. Go to <https://console.cloud.google.com/projectcreate>.
     ```
@@ -81,8 +82,8 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
     Then, You will see the very first log you just created.
         <img src="https://imgur.com/nkI4xHN.png" width="600px"/>
 
-## Setup example code
-1. Obtain datastore credential, this credential can let your code access datastore.
+## Obtain Datastore Credential
+This credential can let your code access datastore.
 
     <img src="https://imgur.com/LGOSar2.png" width="600px"/>
     
@@ -108,7 +109,8 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
     }
     ```
 
-2. Download [cloud-function-datastore-tutorial](https://github.com/wuhduhren/cloud-function-datastore-tutorial/archive/master.zip), you will see.
+## Download Example Code
+1. Download [cloud-function-datastore-tutorial](https://github.com/wuhduhren/cloud-function-datastore-tutorial/archive/master.zip), you will see.
     * `index.js`, which is the function we will later on deploy on cloud function.
     * `datastore-credential.json`, replace this file with the credential you obtained.
     * `README.md`
@@ -140,7 +142,7 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
     Or check out the [official doc](https://cloud.google.com/datastore/docs/concepts/indexes).
 4. If you want to delete the whole KIND (table), you need to remove all entities (rows).
 
-# Setup Cloud Function
+# Deploy Cloud Function
 ## Enable Cloud Function API
 1. Click the bar on the top left Navigation menu on the [GCP console](https://console.cloud.google.com/datastore)
 2. Find `Cloud Functions` in the `COMPUTE` section.
@@ -226,8 +228,8 @@ Go to the cloud function web console, you should see the function `savelog` with
 ## Note
 If you plan to use cloud function on your product, definitely worth a looks at its [best practice](https://cloud.google.com/functions/docs/bestpractices/tips).
 
-# Save a log
-## Take a look at the function
+# Save a Log
+## Take a look at the Function
 The Cloud function will look for index.js then execute the function `savelog`.
 ```
 const Datastore = require('@google-cloud/datastore');
@@ -288,7 +290,7 @@ https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/sav
     Then you get https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog?log=i_funcking_did_it&uid=1
     ```
 
-## Check the log on Datastore
+## Check the Log on Datastore
 
 <img src="https://imgur.com/AFsNHZW.png" width="400px"/>
 
