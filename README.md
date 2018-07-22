@@ -17,8 +17,8 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
 	* Install Cloud Function SDK
 	* Deploy
 * Save a Log
-	* Take a look at the Function
-	* Send a request to Cloud Function
+	* Take a Look at the Function
+	* Send a Request to Cloud Function
 	* Check the Log on Datastore
 * Summary
 * OS & APIs versions
@@ -229,7 +229,7 @@ Go to the cloud function web console, you should see the function `savelog` with
 If you plan to use cloud function on your product, definitely worth a looks at its [best practice](https://cloud.google.com/functions/docs/bestpractices/tips).
 
 # Save a Log
-## Take a look at the Function
+## Take a Look at the Function
 The Cloud function will look for index.js then execute the function `savelog`.
 ```
 const Datastore = require('@google-cloud/datastore');
@@ -263,7 +263,7 @@ exports.savelog = (req, res) => {
 ```
 This function took two parameters. `uid` and `log`.
 
-## Send a request to Cloud Function
+## Send a Request to Cloud Function
 Send an HTTP request to from browser. This request will go to the index.js and send back an response.
 ```
 https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog?log=i_funcking_did_it&uid=1
