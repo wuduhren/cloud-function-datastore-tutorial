@@ -269,7 +269,7 @@ https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/sav
 
 <img src="https://imgur.com/Yw3cKcl.png" width="600px"/>
 
-### HTTP/HTTPS request from browser:
+### Break it down:
 1. `https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog` is the url endpoint of the cloud function. You can find the URL when you click the function, then Trigger.
 
 <img src="https://imgur.com/zzRuLmK.png" width="300px"/>
