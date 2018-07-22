@@ -1,5 +1,5 @@
 # Overview
-By Cloud Function, we can save a log (or anything) to our Datastore without a server. A server-less log system!
+With Cloud Function, we can save a log (or anything) to our Datastore without a server. A server-less log system!
 
 Cloud Function is a light-weight solution to deploy your service, especially when your need is to simply handle HTTP/HTTPS requests. Datastore can handle large amount of flow, charge relatively less price. And both of them have an user-friendly web console.
 
@@ -294,7 +294,7 @@ https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/sav
 
 There you have it! We save a log to Datastore without a server! Most of all, the log can be sent from anywhere in the world, browsers, mobiles, servers...
 
-#OS & APIs versions
+# OS & APIs versions
 ```
 Cloud Function:  v1 (still in Beta)
 Cloud Datasotre: v1
