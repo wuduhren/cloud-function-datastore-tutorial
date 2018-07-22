@@ -1,7 +1,7 @@
 # Overview
 In this tutorial, we are going to save a log to Datastore without deploying a server. A server-less log system! Think about how we can apply it to other services, we can pretty much do anything server-less!
 
-Cloud Function is a light-weight solution to deploy your service, especially when your need is simple. Datastore can handle large amount of non relational data with relatively low price. Most of all, both of them have an user-friendly web console.
+Cloud Function is a light-weight solution to deploy your service, especially when your need is simple. Datastore can handle large amount of non-relational data with relatively low price. Most of all, both of them have an user-friendly web console.
 
 Since Google Cloud Platform hasn't release the Cloud function's implementation of datastore, I decided to write a tutorial how to do it.
 
