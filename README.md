@@ -133,8 +133,8 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
     ```
 
 ## Note
-1. [Datastore official guide](https://cloud.google.com/datastore/docs/quickstart).
-2. If you need to query by uid, you can simply index the uid.
+1. Check out the [Datastore official guide](https://cloud.google.com/datastore/docs/quickstart).
+2. If you need to query by single names (column), for example, uid, you can simply index the uid.
 3. But if you need to query or order by multiple names (column), you will need to setup `composite indexes`.
     Its a bit complecated, I will leave it to the next tutorial.
     Or check out the [official doc](https://cloud.google.com/datastore/docs/concepts/indexes).
@@ -224,6 +224,7 @@ Go to the cloud function web console, you should see the function `savelog` with
 <img src="https://imgur.com/Fjrnjqz.png" width="300px"/>
 
 ##Note
+
 If you plan to use cloud function on your product, definitely worth a looks at its [best practice](https://cloud.google.com/functions/docs/bestpractices/tips).
 
 # Save a log
@@ -270,29 +271,29 @@ https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/sav
 <img src="https://imgur.com/Yw3cKcl.png" width="600px"/>
 
 HTTP/HTTPS request from browser:
-1. `https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog` is the url endpoint of the cloud function. You can find the URL when you click the function, then Trigger.
+    1. `https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog` is the url endpoint of the cloud function. You can find the URL when you click the function, then Trigger.
 
-<img src="https://imgur.com/zzRuLmK.png" width="300px"/>
-<img src="https://imgur.com/vcGtPm2.png" width="300px"/>
+    <img src="https://imgur.com/zzRuLmK.png" width="300px"/>
+    <img src="https://imgur.com/vcGtPm2.png" width="300px"/>
 
-2. Use `?` to seperate the endpoint URL and parameters. Use `=` to asign values to parameters. And use `&` to seperate each parameters and value pairs.
+    2. Use `?` to seperate the endpoint URL and parameters. Use `=` to asign values to parameters. And use `&` to seperate each parameters and value pairs.
 
-3. For example, if you want to save `log`: `i_funcking_did_it` with an `uid` of `1`
-    ```
-    First, you need the endpoint.
-    https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog
-    Use ? to seperate parameters and URL endpoint.
-    Asign i_funcking_did_it to log, log=i_funcking_did_it
-    Use & to seperate parameters and value pairs.
-    Asign 1 to uid, uid=1
-    Then you get https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog?log=i_funcking_did_it&uid=1
-    ```
+    3. For example, if you want to save `log`: `i_funcking_did_it` with an `uid` of `1`
+        ```
+        First, you need the endpoint.
+        https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog
+        Use ? to seperate parameters and URL endpoint.
+        Asign i_funcking_did_it to log, log=i_funcking_did_it
+        Use & to seperate parameters and value pairs.
+        Asign 1 to uid, uid=1
+        Then you get https://asia-northeast1-cloud-function-datastore-tutorial.cloudfunctions.net/savelog?log=i_funcking_did_it&uid=1
+        ```
 
 ## Check the log on Datastore
 
 <img src="https://imgur.com/AFsNHZW.png" width="400px"/>
 
-There you have it! We save a log to Datastore without a server! Most of all, log can be sent from anywhere in the world to Datasotre, browsers, mobiles, servers...
+There you have it! We save a log to Datastore without a server! Most of all, the log can be sent from anywhere in the world, browsers, mobiles, servers...
 
 #OS & APIs versions
 ```
