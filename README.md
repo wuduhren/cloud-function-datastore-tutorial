@@ -34,16 +34,16 @@ Since Google Cloud Platform hasn't release the Cloud function's implementation o
 
 2. Enter a project name, such as `cloud-function-datastore-tutorial`, create.
 
-    <img src="https://imgur.com/Gc8GVxu.png" width="600px"/>
-3. Remember you project id, it should be like: `cloud-function-datastore-tutorial` or `cloud-function-datastore-tutorial-123`.
-3. Wait until the project is created. It would take about a minutes.
+    <img src="https://imgur.com/QeAP3Jo.png" width="600px"/>
+3. Take down your project id.
+4. Wait until the project is created. It would take about a minutes.
 
 ## Setup Cloud Datastore
 1. Go to the datasotre web console.
 
-	<img src="https://imgur.com/GvdbsvI.png" width="600px"/>
+	<img src="https://imgur.com/LcrdVAw.png" width="600px"/>
 	
-	<img src="https://imgur.com/DC5I3qu.png" width="600px"/>
+	<img src="https://imgur.com/m7prqNx.png" width="600px"/>
 
 2. Create entity.
 
@@ -117,8 +117,8 @@ This credential can let your code access datastore.
     * `package.json`, within it, the cloud datastore nodeJS library, which is installed in the file already.
     * Others are the cloud datastore nodeJS library.
 
-3. Replace `datastore-credential.json` with the credential you obtained.
-4. Change the variable in index.js. 
+2. Replace `datastore-credential.json` with the credential you obtained.
+3. Change the variable in index.js. 
     If you forget your project id, click the project name on the top off the navigation bar.
     You will see a list of Name and ID.
     ```
